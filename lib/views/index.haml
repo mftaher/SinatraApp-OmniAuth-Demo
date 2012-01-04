@@ -1,0 +1,17 @@
+:javascript
+  $(function() {
+    $('a#facebook').click(function(e) {
+      e.preventDefault();
+      FB.login(function(response) {
+        if (response.authResponse) {
+          window.location.href = '/auth/facebook/callback';
+        }else{
+          console.log("I made boo boo!");
+        }
+      }, { scope: '#{@scope}' });
+    });
+  });
+  
+%a(id="facebook" href="#") Login with Facebook
+%br
+%a(id="twitter" href='/auth/twitter') Login with Twitter

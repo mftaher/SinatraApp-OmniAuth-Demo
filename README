@@ -1,0 +1,18 @@
+Sinatra OmniAuth Demo: Using Facebook and Twitter
+
+To Run:
+1. Set your facebook and twitter app settings in config.yml
+2. bundle install
+3. run app: unicorn -p 3000
+4. browse http://127.0.0.1:3000/
+
+NOTE: 
+a) Twitter doesn't allow app domain as localhost, so set 127.0.0.1:3000 as your app domain.
+b) In application settings set callbacks to /auth/:provider/callback # :provider = facebook or twitter
+c) I like to run on port 3000 you can run any as you wish just set it everywhere.
+d) OmniAuth allows other authentication providers here's a list: https://github.com/intridea/omniauth/wiki/List-of-Strategies
+e) If you have rack 1.4.0 installed and app isn't running try downgrading rack to 1.3.6
+
+
+follow me on twitter: http://twitter.com/ftaher
+

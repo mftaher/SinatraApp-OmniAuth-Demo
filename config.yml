@@ -1,0 +1,8 @@
+facebook:
+  app_id: "REPLACE_APP_ID"
+  app_secret: "REPLACE_APP_SECRET"
+  scope: "SET SCOPE" # user permission
+    
+twitter:
+  consumer_key: "REPLACE_CONSUMER_KEY"
+  consumer_secret: "REPLACE_CONSUMER_SECRET"

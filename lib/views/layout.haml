@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %title Sinatra OmniAuth Demo - Being Social
+    %link(rel="stylesheet" href="css/styles.css")
+    %script(type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+  %body
+    #fb-root
+    :javascript
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '#{@fb_id}', // App ID
+          channelUrl : '//localhost:3000/channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          oauth      : true, // enable OAuth 2.0
+          xfbml      : true  // parse XFBML
+        });
+    
+      };
+
+      (function(d){
+         var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         d.getElementsByTagName('head')[0].appendChild(js);
+       }(document));
+
+    =yield
+    
