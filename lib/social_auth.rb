@@ -10,7 +10,8 @@ module SinatraApp
       
       set :root, File.dirname(__FILE__)
       set :app_path, '/'
-      
+      set :sessions, true
+
       before do
         @scope = ENV["facebook_scope"]
         @fb_id = ENV["facebook_id"]
